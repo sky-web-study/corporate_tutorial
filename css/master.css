@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.6;
 }
 ol, ul {
 	list-style: none;
@@ -88,4 +88,56 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Vision */
+.section-inner {
+  padding: 90px 10px 110px;
+}
+.section-inner h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'timeburner-regular';
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.vision p{
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+/* Service */
+.service {
+  background: url(../images/bg_service.jpg);
+  background-size: 100%;
+}
+.service h2 {
+  color: #fff;
+}
+.service .section-inner {
+  padding: 45px 10px 30px;
+}
+.card-wrap {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+.card {
+  width: calc(33.3% - 20px);
+  background: #fff;
+}
+.card figure {
+  position: relative;
+}
+.card figcaption {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+}
+.card-text {
+  padding: 10px 15px;
 }
