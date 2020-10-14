@@ -96,7 +96,7 @@ nav {
 .section-inner h2 {
   font-size: 60px;
   text-align: center;
-  font-family: 'timeburner-regular';
+  font-family: 'timeburner_regular';
   margin-bottom: 30px;
   font-weight: bold;
 }
@@ -140,4 +140,58 @@ nav {
 }
 .card-text {
   padding: 10px 15px;
+}
+/* News */
+.list-news {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.list-news > li {
+  padding: 25px 10px;
+  display: flex;
+  border-top: 1px solid #e5e5e5;
+  padding-left: 50px;
+}
+.list-news > li:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+.list-news > li > .title {
+  color: #333;
+  font-size: 16px;
+  padding-left: 50px;
+}
+.list-news > li > span {
+  display:flex;
+  align-items: center;
+}
+/* Company */
+.company {
+  position: relative;
+  height: 652px;
+}
+.box-company {
+  z-index: 1;
+  position: absolute;
+  width: 500px;
+  padding: 50px 35px;
+  background: #fff;
+  opacity: .9;
+}
+.company th {
+  color: #888;
+  font-size: 16px;
+  width: 28%;
+  padding: 0 10px;
+}
+.company td {
+  color: #333;
+  font-size: 16px;
+  padding: 5px 30px 5px 0;
+}
+.map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
