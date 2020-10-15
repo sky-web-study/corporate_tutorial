@@ -195,3 +195,67 @@ nav {
   left: 0;
   top: 0;
 }
+/* Recruit */
+.recruit .section-inner {
+   padding: 90px 10px 200px;
+}
+.recruit-wrap {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.recruit-wrap::before {
+  content: "";
+  display: block;
+  background: url(../images/recruit_02.jpg) no-repeat;
+  position: absolute;
+  width: 500px;
+  height: 280px;
+  top: 0;
+  right: 0;
+}
+.recruit-wrap::after {
+  content: "";
+  display: block;
+  background: url(../images/recruit_01.jpg) no-repeat;
+  position: absolute;
+  width: 500px;
+  height: 280px;
+  right: 180px;
+  top: 230px;
+}
+.recruit-inner {
+  max-width: 480px;
+  padding: 20px;
+}
+.recruit-inner p {
+  margin-bottom: 40px;
+}
+.recruit-wrap h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.list-recruit {
+  margin-bottom: 50px;
+}
+.list-recruit > li {
+  margin-bottom: 10px;
+}
+.btn-01 {
+  color: #fff;
+  background: #333;
+  display: block;
+  width: 282px;
+  font-size: 20px;
+  padding: 20px 10px;
+  text-align: center;
+}
+footer {
+  background: #000;
+  text-align: center;
+}
+footer small {
+  padding: 10px;
+  color: #fff;
+}
