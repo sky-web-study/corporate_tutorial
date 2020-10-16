@@ -82,12 +82,22 @@ nav {
 }
 /* メインビジュアル */
 .main-visual {
-  height: 100vh;
-  background: url(../images/main_visual.jpg) no-repeat;
-  background-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+}
+.main-visual video {
+  min-width: 100%;
+  min-height: 100vh;
+}
+.main-visual h1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 400px;
+  width: 100%;
+  height: 50px;
 }
 /* Vision */
 .section-inner {
@@ -172,7 +182,7 @@ nav {
 .box-company {
   z-index: 1;
   position: absolute;
-  width: 500px;
+  max-width: 500px;
   padding: 50px 35px;
   background: #fff;
   opacity: .9;
