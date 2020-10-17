@@ -269,3 +269,34 @@ footer small {
   padding: 10px;
   color: #fff;
 }
+
+/* レスポンシブル対応 */
+@media screen and (max-width: 768px){
+  .section-inner {
+    padding: 40px 10px 50px;
+  }
+  .recruit .section-inner {
+    padding:40px 10px 50px;
+  }
+  .section-inner h2 {
+    font-size: 48px;
+  }
+  .card-wrap {
+    display: block;
+  }
+  .card {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+  .list-news > li {
+    display: block;
+    padding: 25px 10px;
+  }
+  .list-news > li > .title {
+    padding-left: 0;
+  }
+  .list-news > li > span {
+    margin-bottom: 10px;
+  }
+}
