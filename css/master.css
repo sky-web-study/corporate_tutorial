@@ -299,4 +299,34 @@ footer small {
   .list-news > li > span {
     margin-bottom: 10px;
   }
+  .company {
+    height: auto;
+  }
+  .box-company {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+  .company td {
+    padding: 5px 5px 5px 0;
+    width: 40%;
+  }
+  .map {
+    position: static;
+    width: 100%;
+    height: 400px;
+  }
+  .recruit-inner {
+    padding: 0;
+  }
+  .btn-01 {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1040px){
+  .recruit-wrap::before, .recruit-wrap::after{
+    display: none;
+  }
 }
