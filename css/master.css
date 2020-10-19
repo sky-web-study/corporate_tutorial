@@ -46,7 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* header */
+/* 全体 */
 a {
   text-decoration: none;
 }
@@ -56,6 +56,14 @@ a {
 }
 li {
   list-style: none;
+}
+button {
+  background: none;
+  border: none;
+}
+/* header */
+.btn-menu {
+  display: none;
 }
 nav {
   top: 0;
@@ -272,6 +280,71 @@ footer small {
 
 /* レスポンシブル対応 */
 @media screen and (max-width: 768px){
+  .btn-menu {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background: #333;
+  }
+  .btn-menu-lines {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    margin: auto;
+    background: #fff;
+  }
+  .btn-menu-lines::before, .btn-menu-lines::after {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    content: "";
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .btn-menu-lines::before {
+    top: 6px;
+  }
+  .btn-menu-lines::after {
+    top: -6px;
+  }
+  .btn-menu.is-animate .btn-menu-lines {
+    background: none;
+  }
+  .btn-menu.is-animate .btn-menu-lines::before {
+    -webkit-transform: rotate3d(0, 0, 2, 45deg);
+    transform: rotate3d(0, 0, 2, 45deg);
+    top: 0;
+  }
+  .btn-menu.is-animate .btn-menu-lines::after {
+    -webkit-transform: rotate3d(0, 0, 2, -45deg);
+    transform: rotate3d(0, 0, 2, -45deg);
+    top: 0;
+  }
+  nav {
+    height: 100vh;
+    display: none;
+  }
+  .nav-main {
+    flex-direction: column;
+    height: 100%;
+  }
+  .nav-main > li {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .nav-main > li + li {
+    margin-left: 0;
+  }
   .section-inner {
     padding: 40px 10px 50px;
   }
