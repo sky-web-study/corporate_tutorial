@@ -1,24 +1,37 @@
 $(function () {
   const $win = $(window);
   const $btnMenu = $('.btn-menu');
-  const $nav = $('header &gt; nav');
-  const animate = 'is-animate';
+  const $nav = $('header > nav');
+  const isAnimate  = 'is-animate';
   const isOpen = 'is-open';
 
+  //ボタンクリック時の処理
   $btnMenu.on('click', function () {
 
-     //ボタンをクリックしたときの記述
+      const $this = $(this);
+      if($nav.is(':animated')){
+         return;
+      }
 
+      if(!$this.hasClass(isOpen)){
+         $nav.slideDown();
+         $this.addClass(isOpen).addClass(isAnimate);
+      }else{
+         $nav.slideUp();
+         $this.removeClass(isOpen).removeClass(isAnimate);
+      }
   });
-  
-  function resizeDisplay() {
 
-     //ウィンドウ幅を変えた時の記述
-
-  }
-  resizeDisplay();
-
+  //ウィンドウリサイズ時の処理
   $win.on('resize', function () {
-    resizeDisplay();
+
+   if ($win.width() > 768) {
+      $nav.show();
+      $btnMenu.removeClass(isOpen).removeClass(isAnimate);
+    } else {
+      if (!$btnMenu.hasClass(isOpen)) {
+        $nav.hide();
+      }
+    }
   });
  });
