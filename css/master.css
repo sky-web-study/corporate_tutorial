@@ -130,7 +130,7 @@ h2::before{
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1px;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -138,8 +138,10 @@ h2::before{
   transform: translateX(-100%);
 }
 .mask_inner span {
-  animation: show .1s 1.5s forwards;
   opacity: 0;
+}
+.mask_inner.is-animate span {
+  animation: show .1s 1.5s forwards;
 }
 .is-animate::before{
   animation: maskIn .5s 1s forwards cubic-bezier(.8, 0, .5, 1) , maskOut .5s 1.6s forwards cubic-bezier(.8, 0, .5, 1);
