@@ -54,4 +54,20 @@ $(function () {
     });
   })();
 
+  //スムーススクロール
+  (function (){
+
+    const $body = $('body, html');
+    const duration = 1000;
+    const motion = 'swing';
+
+    $('a[href^="#"]').on('click', function(){
+      const $this = $(this);
+      const href = $this.attr('href');
+      const target = href === '#top' ? 'body' : href;
+      const position = $(target).offset().top;
+      $body.animate({ scrollTop: position}, duration, motion);
+    });
+    
+  })();
 });
